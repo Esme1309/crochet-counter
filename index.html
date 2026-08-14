@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>鉤針圈數計算小幫手</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧶</text></svg>">
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: #fff0f5; /* 整體背景顏色 */
+      display: flex;
+      justify-content: center;
+      padding-top: 30px;
+      margin: 0;
+      
+      -webkit-user-select: none;
+      user-select: none;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      width: 90%;
+      max-width: 350px;
+      text-align: center;
+    }
+    h2 {
+      color: #555;
+      margin-bottom: 25px;
+    }
+    .input-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #666;
+      font-weight: bold;
+    }
+    input {
+      width: calc(100% - 20px);
+      padding: 12px 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 24px;
+      text-align: center;
+      color: #333;
+    }
+    .btn-a {
+      background-color: #ffb6c1; /* 大按鈕顏色 */
+      color: #fff;
+      border: none;
+      padding: 20px;
+      border-radius: 12px;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 10px;
+      box-shadow: 0 4px 0 #ff99aa;
+    }
+    .btn-a:active {
+      transform: translateY(4px);
+      box-shadow: none;
+    }
+    .btn-b {
+      background-color: #f1f1f1;
+      color: #888;
+      border: none;
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 15px;
+    }
+    .btn-b:active {
+      transform: translateY(3px);
+      background-color: #e4e4e4;
+    }
+  </style>
+</head>
+
+
+<body>
+  <div class="container">
+    <h2>🧶 鉤針圈數計算小幫手</h2>
+    
+    <div class="input-group">
+      <label>目前圈數</label>
+      <input type="number" id="current" value="1">
+    </div>
+
+    <div class="input-group">
+      <label>總圈數</label>
+      <input type="number" id="total" value="10">
+    </div>
+
+    <button class="btn-a" onclick="addOne()">加 1 圈</button>
+    <button class="btn-b" onclick="resetCount()">重置為 1</button>
+  </div>
+
+
+  <script>
+    function addOne() {
+
+      let currentInput = document.getElementById('current');
+      let totalInput = document.getElementById('total');
+      
+      let currentVal = Number(currentInput.value);
+      let totalVal = Number(totalInput.value);
+
+      if (currentVal >= totalVal) {
+        currentInput.value = 1; // 回到 1
+      } else {
+        currentInput.value = currentVal + 1; // 否則就加 1
+      }
+    }
+
+    function resetCount() {
+      document.getElementById('current').value = 1;
+    }
+  </script>
+
+</body>
+</html>
