@@ -2,7 +2,7 @@
 
 這是我為了方便記錄鉤針編織進度，開發的網頁互動小工具！專為手機操作而設計，讓編織過程更順暢。
 
-👉 **[點此直接開啟計算機](https://esme1309.github.io/crochet-counter/)** 
+👉 **[點此直接開啟計算機](https://esme1309.github.io/crochet-row-counter/)** 
 
 ## ✨ 工具特色
 
@@ -13,7 +13,7 @@
 
 This is an interactive web tool I developed to easily track my crochet progress! Designed specifically for mobile use to make the crocheting process smoother.
 
-👉 **[Click here to open the counter](https://esme1309.github.io/crochet-counter/)**
+👉 **[Click here to open the counter](https://esme1309.github.io/crochet-row-counter/)**
 
 ## ✨ Features
 
